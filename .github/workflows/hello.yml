@@ -3,12 +3,12 @@ name: Greeting Workflow
 
 # ワークフローが実行されるきっかけ
 on:
-  # mainブランチにpushされた時
+  # masterブランチにpushされた時
   push:
-    branches: [ main ]
-  # mainブランチへのプルリクエストが作成された時
+    branches: [ master ]
+  # masterブランチへのプルリクエストが作成された時
   pull_request:
-    branches: [ main ]
+    branches: [ master ]
 
 # 実行するジョブ
 jobs:
