@@ -1,7 +1,7 @@
 # ワークフローの名前を少し変更
 name: Greeting Workflow
 
-# ワークフローが実行されるきっかけ
+# ワークフローが実行されるきっかけ(トリガー)
 on:
   # masterブランチにpushされた時
   push:
@@ -14,7 +14,9 @@ on:
 jobs:
   # ジョブの名前を greet-user に変更
   greet-user:
+    # runs-on: ジョブを実行させる環境を指定する
     runs-on: ubuntu-latest
+    # ステップを書く
     steps:
       # --- ここからが新しいステップ ---
 
