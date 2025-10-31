@@ -1,0 +1,21 @@
+# ワークフローの名前（Actionsタブの一覧に表示されます）
+name: Hello World Workflow
+
+# ワークフローが実行されるきっかけ（トリガー）
+on:
+  # このリポジトリにpush（コードの追加や変更）があった時に実行する
+  push:
+
+# 実行するお仕事（ジョブ）の内容
+jobs:
+  # "say-hello" という名前のジョブを定義（名前は自由です）
+  say-hello:
+    # このジョブを実行する仮想マシンの種類（Ubuntuの最新版を使います）
+    runs-on: ubuntu-latest
+
+    # 実際に行う手順（ステップ）
+    steps:
+      # 1つ目のステップ
+      - name: Echo Hello World
+        # 'Hello, world!' という文字を画面（ログ）に出力するコマンド
+        run: echo 'Hello, world!'
